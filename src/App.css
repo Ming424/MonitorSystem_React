@@ -1,0 +1,173 @@
+/* CSS Data binding, use var(--example) to refer*/
+:root {
+  /* Width of sidebar */
+  --sidebar-width: 12rem;
+  /* Global animation speed */
+  --animation-speed: 0s ease-out;
+  /* Height of header */
+  --header-height: 49px;
+}
+
+/* Make component unselectable */
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Fixed stick-top position while modal is opened */
+.modal-open .sticky-top,
+.fixed-top {
+  padding-right: 1rem !important;
+  margin-right: 0 !important;
+}
+.fixed-top {
+  right: 17px; /*should be equal to 'padding-right' value applied to body on modal show */
+}
+
+/* List view TABLE HEADER sticky */
+.sticky-top-2 {
+  z-index: 1;
+  top: var(--header-height);
+  /* margin-right: 16px; */
+}
+
+/* SIDEBAR */
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: 0;
+  /* -webkit-transition: var(--animation-speed);
+  -moz-transition: var(--animation-speed);
+  -o-transition: var(--animation-speed);
+  transition: var(--animation-speed);  */
+  position: fixed;
+  height: 100%;
+  z-index: 3; /* top layer */
+}
+
+/* DISABLE SIDEBAR selection hightlight */
+#sidebar-wrapper ::selection {
+  color: none;
+  background: none;
+}
+
+.list-group {
+  max-height: 90%; /* @IMPORTANT: hard coded! */
+  margin-bottom: 0px;
+  /* overflow:scroll; */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* SIDEBAR HEADING */
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+  background-color: white;
+  border-bottom: 1px #d3d3d3 solid;
+}
+
+/* SIDEBAR CONTENT */
+#sidebar-wrapper .list-group {
+  width: var(--sidebar-width);
+}
+.container {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+.col {
+  margin-right: 0;
+}
+/* MAIN PAGE (include header) */
+#page-content-wrapper {
+  min-width: 0;
+  width: 100%;
+  margin-left: var(--sidebar-width);
+  /* -webkit-transition: var(--animation-speed);
+  -moz-transition: var(--animation-speed);
+  -o-transition: var(--animation-speed);
+  transition: var(--animation-speed); */
+  padding-bottom: 50vh; /* reserved space for chart */
+}
+
+/* [TOOGLE SIDEBAR] -> action on SIDEBAR */
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: calc((var(--sidebar-width)) * -1);
+}
+/* [TOOGLE SIDEBAR] -> action on MAIN PAGE */
+#wrapper.toggled #page-content-wrapper {
+  margin-left: 0;
+}
+/* [TOOGLE SIDEBAR] -> action on FOOTER */
+#wrapper.toggled #footer {
+  width: 100%;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0px;
+  width: calc(100% - (var(--sidebar-width) + 2px));
+  /* -webkit-transition: var(--animation-speed);
+  -moz-transition: var(--animation-speed);
+  -o-transition: var(--animation-speed);
+  transition: var(--animation-speed); */
+}
+#chart-wrapper {
+  box-shadow: 2px -3px 3px -1px rgb(228, 228, 228);
+  z-index: 1;
+  background-color: white;
+}
+#footer.toggled-footer {
+  height: 2.7vh;
+}
+
+@media (max-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: calc((var(--sidebar-width)) * -1);
+    margin-top: var(--header-height);
+  }
+
+  #page-content-wrapper {
+    min-width: 100vw;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  .list-group {
+    max-height: 85%; /* @IMPORTANT: hard coded! */
+  }
+
+  #page-content-wrapper #footer {
+    width: 100%;
+  }
+
+  #wrapper.toggled #footer {
+    /* width: 100%; */
+    height: 0vh;
+  }
+
+  #wrapper.toggled .container-fluid {
+    pointer-events: none;
+  }
+
+  /* Overlay on mobile sidebar toogle */
+  #wrapper.toggled .overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+    position: fixed;
+    display: block;
+  }
+}
