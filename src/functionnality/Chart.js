@@ -12,30 +12,28 @@ function Chart(props) {
 
   const [label, setLabel] = useState([])
 
-  const [F7LENGFAL, setF7LENGFAL] = useState([])
-  const [F7LENGCOMP, setF7LENGCOMP] = useState([])
-  const [F7LENGPREF, setF7LENGPREF] = useState([])
-  const [F7LENGVEND, setF7LENGVEND] = useState([])
-  const [F7LENGKLUN, setF7LENGKLUN] = useState([])
-  const [F7ENGWIRE, setF7ENGWIRE] = useState([])
-  const [F7ENGM_P, setF7ENGM_P] = useState([])
-  const [F7ENGSTRES, setF7ENGSTRES] = useState([])
-  const [F7ENGDOOR, setF7ENGDOOR] = useState([])
-  const [F7ENGSTRUC, setF7ENGSTRUC] = useState([])
-  const [F7ENGSTS, setF7ENGSTS] = useState([])
-  const [F7ENGSYS, setF7ENGSYS] = useState([])
-  const [F7ENGEMCS, setF7ENGEMCS] = useState([])
-  const [F7ENGELEC, setF7ENGELEC] = useState([])
-  const [F7ENGINS, setF7ENGINS] = useState([])
-  const [F7ENGPNEU, setF7ENGPNEU] = useState([])
-  const [F7ENGPPLT, setF7ENGPPLT] = useState([])
-  const [F7ENGFUEL, setF7ENGFUEL] = useState([])
-  const [F7ENGFIFA, setF7ENGFIFA] = useState([])
-  const [F7ENGLGDM, setF7ENGLGDM] = useState([])
-  const [F7ENGHYDR, setF7ENGHYDR] = useState([])
-  const [F7ENGFLTC, setF7ENGFLTC] = useState([])
-  const [C1SENGAERO, setC1SENGAERO] = useState([])
-  const [F7ENGINT, setF7ENGINT] = useState([])
+  const [F1GROUP1, setF1GROUP1] = useState([])
+  const [F1GROUP2, setF1GROUP2] = useState([])
+  const [F1GROUP3, setF1GROUP3] = useState([])
+  const [F1GROUP4, setF1GROUP4] = useState([])
+  const [F1GROUP5, setF1GROUP5] = useState([])
+  const [F1GROUP6, setF1GROUP6] = useState([])
+
+  const [F4GROUP1, setF4GROUP1] = useState([])
+  const [F4GROUP2, setF4GROUP2] = useState([])
+  const [F4GROUP3, setF4GROUP3] = useState([])
+  const [F4GROUP4, setF4GROUP4] = useState([])
+  const [F4GROUP5, setF4GROUP5] = useState([])
+  const [F4GROUP6, setF4GROUP6] = useState([])
+
+  const [F8GROUP1, setF8GROUP1] = useState([])
+  const [F8GROUP2, setF8GROUP2] = useState([])
+  const [F8GROUP3, setF8GROUP3] = useState([])
+  const [F8GROUP4, setF8GROUP4] = useState([])
+
+  const [FXGROUP1, setFXGROUP1] = useState([])
+  const [FXGROUP2, setFXGROUP2] = useState([])
+  const [FXGROUP3, setFXGROUP3] = useState([])
 
   useEffect(() => {
     setData({
@@ -43,232 +41,160 @@ function Chart(props) {
 
       datasets: [
         {
-          label: "F7LENGFAL",
-          data: F7LENGFAL,
+          label: "F1GROUP1",
+          data: F1GROUP1,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "#cc0000",
           fill: false
         },
         {
-          label: "F7LENGCOMP",
-          data: F7LENGCOMP,
+          label: "F1GROUP2",
+          data: F1GROUP2,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "#cc6600",
           fill: false
         },
         {
-          label: "F7LENGPREF",
-          data: F7LENGPREF,
+          label: "F1GROUP3",
+          data: F1GROUP3,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "#cccc00",
           fill: false
         },
         {
-          label: "F7LENGVEND",
-          data: F7LENGVEND,
+          label: "F1GROUP4",
+          data: F1GROUP4,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "#66cc00",
           fill: false
         },
         {
-          label: "F7LENGKLUN",
-          data: F7LENGKLUN,
+          label: "F1GROUP5",
+          data: F1GROUP5,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "#00cccc",
           fill: false
         },
         {
-          label: "F7ENGWIRE",
-          data: F7ENGWIRE,
+          label: "F1GROUP6",
+          data: F1GROUP6,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "#0000cc",
           fill: false
         },
         {
-          label: "F7ENGM&P",
-          data: F7ENGM_P,
+          label: "F4GROUP1",
+          data: F4GROUP1,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "#9900cc",
           fill: false
         },
         {
-          label: "F7ENGSTRES",
-          data: F7ENGSTRES,
+          label: "F4GROUP2",
+          data: F4GROUP2,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "black",
           fill: false
         },
         {
-          label: "F7ENGDOOR",
-          data: F7ENGDOOR,
+          label: "F4GROUP3",
+          data: F4GROUP3,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "black",
           fill: false
         },
         {
-          label: "F7ENGSTRUC",
-          data: F7ENGSTRUC,
+          label: "F4GROUP4",
+          data: F4GROUP4,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "black",
           fill: false
         },
         {
-          label: "F7ENGSTS",
-          data: F7ENGSTS,
+          label: "F4GROUP5",
+          data: F4GROUP5,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "black",
           fill: false
         },
         {
-          label: "F7ENGSYS",
-          data: F7ENGSYS,
+          label: "F4GROUP6",
+          data: F4GROUP6,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "black",
           fill: false
         },
         {
-          label: "F7ENGEMCS",
-          data: F7ENGEMCS,
+          label: "F8GROUP1",
+          data: F8GROUP1,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "black",
           fill: false
         },
         {
-          label: "F7ENGELEC",
-          data: F7ENGELEC,
+          label: "F8GROUP2",
+          data: F8GROUP2,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "black",
           fill: false
         },
         {
-          label: "F7ENGELEC",
-          data: F7ENGELEC,
+          label: "F8GROUP3",
+          data: F8GROUP3,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "#000000",
           fill: false
         },
         {
-          label: "F7ENGINS",
-          data: F7ENGINS,
+          label: "F8GROUP4",
+          data: F8GROUP4,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "#999999",
           fill: false
         },
         {
-          label: "F7ENGPNEU",
-          data: F7ENGPNEU,
+          label: "FXGROUP1",
+          data: FXGROUP1,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "#595959",
           fill: false
         },
         {
-          label: "F7ENGPPLT",
-          data: F7ENGPPLT,
+          label: "FXGROUP2",
+          data: FXGROUP2,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "#1a1a1a",
           fill: false
         },
         {
-          label: "F7ENGFUEL",
-          data: F7ENGFUEL,
+          label: "FXGROUP3",
+          data: FXGROUP3,
           borderWidth: 1,
           lineTension: 0,
           borderColor: "#4d2e00",
           fill: false
-        },
-        {
-          label: "F7ENGFIFA",
-          data: F7ENGFIFA,
-          borderWidth: 1,
-          lineTension: 0,
-          borderColor: "#4d0000",
-          fill: false
-        },
-        {
-          label: "F7ENGLGDM",
-          data: F7ENGLGDM,
-          borderWidth: 1,
-          lineTension: 0,
-          borderColor: "#333300",
-          fill: false
-        },
-        {
-          label: "F7ENGHYDR",
-          data: F7ENGHYDR,
-          borderWidth: 1,
-          lineTension: 0,
-          borderColor: "#003326",
-          fill: false
-        },
-        {
-          label: "F7ENGFLTC",
-          data: F7ENGFLTC,
-          borderWidth: 1,
-          lineTension: 0,
-          borderColor: "#00004d",
-          fill: false
-        },
-        {
-          label: "C1SENGAERO",
-          data: C1SENGAERO,
-          borderWidth: 1,
-          lineTension: 0,
-          borderColor: "#660066",
-          fill: false
-        },
-        {
-          label: "F7ENGINT",
-          data: F7ENGINT,
-          borderWidth: 1,
-          lineTension: 0,
-          borderColor: "gray",
-          fill: false
         }
       ]
     })
-  }, [
-    C1SENGAERO,
-    F7ENGDOOR,
-    F7ENGELEC,
-    F7ENGEMCS,
-    F7ENGFIFA,
-    F7ENGFLTC,
-    F7ENGFUEL,
-    F7ENGHYDR,
-    F7ENGINS,
-    F7ENGINT,
-    F7ENGLGDM,
-    F7ENGM_P,
-    F7ENGPNEU,
-    F7ENGPPLT,
-    F7ENGSTRES,
-    F7ENGSTRUC,
-    F7ENGSTS,
-    F7ENGSYS,
-    F7ENGWIRE,
-    F7LENGCOMP,
-    F7LENGFAL,
-    F7LENGKLUN,
-    F7LENGPREF,
-    F7LENGVEND,
+  }, [F1GROUP1,F1GROUP2,F1GROUP3,F1GROUP4,F1GROUP5,F1GROUP6,F4GROUP1,F4GROUP2,F4GROUP3,F4GROUP4,F4GROUP5,F4GROUP6,F8GROUP1,F8GROUP2,F8GROUP3,F8GROUP4,FXGROUP1,FXGROUP2,FXGROUP3,
     label
   ])
 
@@ -288,76 +214,61 @@ function Chart(props) {
                     console.log(key + " - " + value)
                     switch (key) {
                       case "F7LENGFAL":
-                        setF7LENGFAL([...F7LENGFAL, value])
+                        setF1GROUP1([...F1GROUP1, value])
                         break
                       case "F7LENGCOMP":
-                        setF7LENGCOMP([...F7LENGCOMP, value])
+                        setF1GROUP2([...F1GROUP2, value])
                         break
                       case "F7LENGPREF":
-                        setF7LENGPREF([...F7LENGPREF, value])
+                        setF1GROUP3([...F1GROUP3, value])
                         break
                       case "F7LENGVEND":
-                        setF7LENGVEND([...F7LENGVEND, value])
+                        setF1GROUP4([...F1GROUP4, value])
                         break
                       case "F7LENGKLUN":
-                        setF7LENGKLUN([...F7LENGKLUN, value])
+                        setF1GROUP5([...F1GROUP5, value])
                         break
                       case "F7ENGWIRE":
-                        setF7ENGWIRE([...F7ENGWIRE, value])
+                        setF1GROUP6([...F1GROUP6, value])
                         break
                       case "F7ENGM&P":
-                        setF7ENGM_P([...F7ENGM_P, value])
+                        setF4GROUP1([...F4GROUP1, value])
                         break
                       case "F7ENGSTRES":
-                        setF7ENGSTRES([...F7ENGSTRES, value])
+                        setF4GROUP2([...F4GROUP2, value])
                         break
                       case "F7ENGDOOR":
-                        setF7ENGDOOR([...F7ENGDOOR, value])
+                        setF4GROUP3([...F4GROUP3, value])
                         break
                       case "F7ENGSTRUC":
-                        setF7ENGSTRUC([...F7ENGSTRUC, value])
+                        setF4GROUP4([...F4GROUP4, value])
                         break
                       case "F7ENGSTS":
-                        setF7ENGSTS([...F7ENGSTS, value])
+                        setF4GROUP5([...F4GROUP5, value])
                         break
                       case "F7ENGSYS":
-                        setF7ENGSYS([...F7ENGSYS, value])
+                        setF4GROUP6([...F4GROUP6, value])
                         break
                       case "F7ENGEMCS":
-                        setF7ENGEMCS([...F7ENGEMCS, value])
+                        setF8GROUP1([...F8GROUP1, value])
                         break
                       case "F7ENGELEC":
-                        setF7ENGELEC([...F7ENGELEC, value])
+                        setF8GROUP2([...F8GROUP2, value])
                         break
                       case "F7ENGINS":
-                        setF7ENGINS([...F7ENGINS, value])
+                        setF8GROUP3([...F8GROUP3, value])
                         break
                       case "F7ENGPNEU":
-                        setF7ENGPNEU([...F7ENGPNEU, value])
+                        setF8GROUP4([...F8GROUP4, value])
                         break
                       case "F7ENGPPLT":
-                        setF7ENGPPLT([...F7ENGPPLT, value])
+                        setFXGROUP1([...FXGROUP1, value])
                         break
                       case "F7ENGFUEL":
-                        setF7ENGFUEL([...F7ENGFUEL, value])
+                        setFXGROUP2([...FXGROUP2, value])
                         break
                       case "F7ENGFIFA":
-                        setF7ENGFIFA([...F7ENGFIFA, value])
-                        break
-                      case "F7ENGLGDM":
-                        setF7ENGLGDM([...F7ENGLGDM, value])
-                        break
-                      case "F7ENGHYDR":
-                        setF7ENGHYDR([...F7ENGHYDR, value])
-                        break
-                      case "F7ENGFLTC":
-                        setF7ENGFLTC([...F7ENGFLTC, value])
-                        break
-                      case "C1SENGAERO":
-                        setC1SENGAERO([...C1SENGAERO, value])
-                        break
-                      case "F7ENGINT":
-                        setF7ENGINT([...F7ENGINT, value])
+                        setFXGROUP3([...FXGROUP3, value])
                         break
                       default:
                         console.log("DEFAULT")
@@ -387,30 +298,7 @@ function Chart(props) {
     }, 1500)
     return () => clearInterval(id)
   }, [
-    C1SENGAERO,
-    F7ENGDOOR,
-    F7ENGELEC,
-    F7ENGEMCS,
-    F7ENGFIFA,
-    F7ENGFLTC,
-    F7ENGFUEL,
-    F7ENGHYDR,
-    F7ENGINS,
-    F7ENGINT,
-    F7ENGLGDM,
-    F7ENGM_P,
-    F7ENGPNEU,
-    F7ENGPPLT,
-    F7ENGSTRES,
-    F7ENGSTRUC,
-    F7ENGSTS,
-    F7ENGSYS,
-    F7ENGWIRE,
-    F7LENGCOMP,
-    F7LENGFAL,
-    F7LENGKLUN,
-    F7LENGPREF,
-    F7LENGVEND,
+    F1GROUP1,F1GROUP2,F1GROUP3,F1GROUP4,F1GROUP5,F1GROUP6,F4GROUP1,F4GROUP2,F4GROUP3,F4GROUP4,F4GROUP5,F4GROUP6,F8GROUP1,F8GROUP2,F8GROUP3,F8GROUP4,FXGROUP1,FXGROUP2,FXGROUP3,
     label,
     props
   ])
