@@ -11,7 +11,6 @@ function Fetch(props) {
   //  Discussion thread: https://github.com/axios/axios/issues/1195
   //  Documentation: https://facebook.github.io/react-native/docs/network
 
-  // const url = "../BD500ENKG_LEQMon.php" // original file that always work
   const url = "../src/api/category/read.php"
 
   useEffect(() => {

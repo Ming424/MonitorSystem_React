@@ -1,4 +1,4 @@
-### From author:
+# From author:
 
 This project represents the generic version of the application created during my internship. There will be no sensitive data realated.
 If you run this react project onto the development server via "npm start", no data will be shown for the moment. I will implement a runnable SQL database asap.
