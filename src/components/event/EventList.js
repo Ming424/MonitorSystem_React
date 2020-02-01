@@ -89,8 +89,7 @@ function EventList(props) {
                       style={{ fontSize: "0.6rem" }}
                       className="badge badge-secondary align-text-top"
                     >
-                      id
-                    </span>
+                      id</span>
                   </div>
                 </div>
               </div>

@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react"
-import "./App.css"
+import React, { useState, useEffect } from "react";
+import "./App.css";
 
 // =======================================================
 //  COMPONENTd IMPORT
 // =======================================================
-import Event from "./components/event/Event"
-import EventList from "./components/event/EventList"
-import Sidebar from "./components/sidebar/Sidebar"
-import Header from "./components/Header"
-import useWindowResize from "./functionnality/useWindowResize"
-import Modal from "./functionnality/Modal"
-import Chart from "./functionnality/Chart"
-import Fetch from "./functionnality/Fetch"
+import Event from "./components/event/Event";
+import EventList from "./components/event/EventList";
+import Sidebar from "./components/sidebar/Sidebar";
+import Header from "./components/Header";
+import useWindowResize from "./functionnality/useWindowResize";
+import Modal from "./functionnality/Modal";
+import Chart from "./functionnality/Chart";
+import Fetch from "./functionnality/Fetch";
 
 function App() {
   // =====================================================
@@ -44,48 +44,247 @@ function App() {
     { name: "FXGROUP2", isChecked: false, isChartChecked: false },
     { name: "FXGROUP3", isChecked: false, isChartChecked: false },
     { name: "hr" }
-  ])
+  ]);
 
   /** Event list (summary) */
-  const [events, setEvents] = useState([])
+  const [events, setEvents] = useState([
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAB001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: "B0101234",
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAC001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    },
+    {
+      groupName: "F1GROUP1",
+      ncrNumber: "AAD001",
+      discrNo: "001",
+      qtH: "0.1",
+      cmlQtH: "0.1",
+      userId: null,
+      partDescription: "AIRPLANE"
+    }
+  ]);
   /** Actived event, event onClick => open modal */
-  const [activedEvent, setActivedEvent] = useState([])
+  const [activedEvent, setActivedEvent] = useState([]);
 
   /** @UPDATE Tracked event list */
-  const [trackedEvents, setTrackedEvents] = useState([])
+  const [trackedEvents, setTrackedEvents] = useState([]);
   /** @UPDATE User name */
-  const [userName] = useState("userName")
+  const [userName] = useState("userName");
   /** @UPDATE User id */
-  const [userId] = useState("000000000")
+  const [userId] = useState("000000000");
   /** @UPDATE User view preference */
-  const [viewPref] = useState("list") /* list/grid */
+  const [viewPref] = useState("list"); /* list/grid */
 
   const [user] = useState({
     name: userName,
     userId: userId,
     viewPref: viewPref,
     trackedEvents: trackedEvents
-  })
+  });
 
   /** Width of broswer */
-  const { width } = useWindowResize()
+  const { width } = useWindowResize();
 
   /** Toogle booleans, false for open */
-  const [sidebarActive, setSidebarState] = useState(false)
-  const [footerActive, setFooterState] = useState(false)
-  const [modalActive, setModalState] = useState(false)
+  const [sidebarActive, setSidebarState] = useState(false);
+  const [footerActive, setFooterState] = useState(false);
+  const [modalActive, setModalState] = useState(false);
 
   /** Toogle for view */
-  const [viewToogle, setViewToogle] = useState("list")
-  const [myViewToogle, setMyViewToogle] = useState("list")
-  const [trackedViewToogle, setTrackedViewToogle] = useState("list")
+  const [viewToogle, setViewToogle] = useState("list");
+  const [myViewToogle, setMyViewToogle] = useState("list");
+  const [trackedViewToogle, setTrackedViewToogle] = useState("list");
 
   /** Group check all boolean */
-  const [checkAll, setCheckAll] = useState(false)
+  const [checkAll, setCheckAll] = useState(false);
 
   /** Checked (chart) group list */
-  const [checkedGroup, setCheckedGroup] = useState([]) // https://www.robinwieruch.de/react-state-array-add-update-remove
-  const [checkedChartGroup, setCheckedChartGroup] = useState([])
+  const [checkedGroup, setCheckedGroup] = useState([]); // https://www.robinwieruch.de/react-state-array-add-update-remove
+  const [checkedChartGroup, setCheckedChartGroup] = useState([]);
 
   // ===================================================================
   //  FUNCTION
@@ -94,44 +293,44 @@ function App() {
   /** VIEW BUTTON GROUP TOOGLE */
   const handleViewToogle = i => {
     if (i === 1) {
-      const newViewToogle = viewToogle === "list" ? "grid" : "list"
-      setViewToogle(newViewToogle)
+      const newViewToogle = viewToogle === "list" ? "grid" : "list";
+      setViewToogle(newViewToogle);
       // @UPDATE [viewPref]
     } else if (i === 2) {
-      const newViewToogle = myViewToogle === "list" ? "grid" : "list"
-      setMyViewToogle(newViewToogle)
+      const newViewToogle = myViewToogle === "list" ? "grid" : "list";
+      setMyViewToogle(newViewToogle);
     } else if (i === 3) {
-      const newViewToogle = trackedViewToogle === "list" ? "grid" : "list"
-      setTrackedViewToogle(newViewToogle)
+      const newViewToogle = trackedViewToogle === "list" ? "grid" : "list";
+      setTrackedViewToogle(newViewToogle);
     }
-  }
+  };
 
   /** SELECT ALL */
   const handleSelectAll = () => {
-    const newCheckAll = !checkAll
+    const newCheckAll = !checkAll;
     groups.map(group =>
       group.name !== "hr" ? (group.isChecked = newCheckAll) : ""
-    )
-    setCheckAll(newCheckAll)
-  }
+    );
+    setCheckAll(newCheckAll);
+  };
 
   /** SUBMIT => set checked (chart) groups in array */
   const handleSubmit = () => {
-    const checkedArray = []
+    const checkedArray = [];
     groups.map(group =>
       group.isChecked === true && group.name !== "hr"
         ? checkedArray.push(group.name)
         : null
-    )
-    setCheckedGroup(checkedArray)
-    const checkedChartArray = []
+    );
+    setCheckedGroup(checkedArray);
+    const checkedChartArray = [];
     groups.map(group =>
       group.isChartChecked === true && group.name !== "hr"
         ? checkedChartArray.push(group.name)
         : null
-    )
-    setCheckedChartGroup(checkedChartArray)
-  }
+    );
+    setCheckedChartGroup(checkedChartArray);
+  };
 
   /** RENDER EVENT */
   const renderEvent = (event, index, view) => {
@@ -149,29 +348,29 @@ function App() {
           handleModal={handleModal}
         ></Event>
       </div>
-    )
-  }
+    );
+  };
 
   /** Open Modal and set actived event */
   const handleModal = event => {
-    setModalState(true)
-    setActivedEvent(event)
-  }
+    setModalState(true);
+    setActivedEvent(event);
+  };
 
   /** RENDER EVENT LIST */
   const renderEvents = () => {
-    var bool = false
+    var bool = false;
     return events.map((event, index) => {
       if (checkedGroup.includes(event.groupName)) {
         if (event.cmlQtH > 8 && !bool) {
-          bool = true
+          bool = true;
           if (viewToogle === "list") {
             return (
               <div key={index}>
                 <div className={"border-top border-secondary "} />
                 {renderEvent(event, index, viewToogle)}
               </div>
-            )
+            );
           } else {
             return (
               <div className="unselectable border border-secondary">
@@ -183,15 +382,15 @@ function App() {
                   >8
                 </div>
               </div>
-            )
+            );
           }
         }
-        return renderEvent(event, index, viewToogle)
+        return renderEvent(event, index, viewToogle);
       } else {
-        return null
+        return null;
       }
-    })
-  }
+    });
+  };
 
   /** RENDER EVENT THAT ASSIGNED TO USER */
   const renderMyEvents = () => {
@@ -199,44 +398,44 @@ function App() {
       event.userId === user.userId
         ? renderEvent(event, index, myViewToogle)
         : ""
-    )
-  }
+    );
+  };
 
   /** REBDER TRACKED EVENT */
   const renderTrackedEvents = () => {
     return trackedEvents.map((event, index) =>
       renderEvent(event, index, trackedViewToogle + "tracked")
-    )
-  }
+    );
+  };
 
   /** ADD TRACKED EVENT */
   const addTracked = event => {
-    console.log(event)
-    const newTrackedEvent = [...trackedEvents, event]
-    setTrackedEvents(newTrackedEvent)
+    console.log(event);
+    const newTrackedEvent = [...trackedEvents, event];
+    setTrackedEvents(newTrackedEvent);
     // @UPDATE
-  }
+  };
 
   /** DELETE TRACKED EVENT */
   const deleteTracked = (event, index) => {
     const newTrackedEvent = trackedEvents.filter(
       trackedEvents => trackedEvents !== event
-    )
-    setTrackedEvents(newTrackedEvent)
+    );
+    setTrackedEvents(newTrackedEvent);
     // @UPDATE
-  }
+  };
 
   /** WINDOW WIDTH LISTENER */
   useEffect(() => {
     if (width <= 768) {
-      setSidebarState(false)
+      setSidebarState(false);
     }
     if (width <= 578) {
-      setViewToogle("grid")
-      setMyViewToogle("grid")
-      setTrackedViewToogle("grid")
+      setViewToogle("grid");
+      setMyViewToogle("grid");
+      setTrackedViewToogle("grid");
     }
-  }, [width])
+  }, [width]);
 
   // ==================================================================================================
   //  HTML
@@ -347,15 +546,15 @@ function App() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 const contentFooterStyle = {
   textAlign: "center",
   fontSize: "16px",
   color: "gray"
-}
+};
 
-export default App
+export default App;
 
 // https://github.com/BlackrockDigital/startbootstrap-simple-sidebar

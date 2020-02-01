@@ -3,7 +3,7 @@
   /* Width of sidebar */
   --sidebar-width: 12rem;
   /* Global animation speed */
-  --animation-speed: 0s ease-out;
+  --animation-speed: 0.2s ease-out;
   /* Height of header */
   --header-height: 49px;
 }
